@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Início - Soltec{% endblock %}
+
+{% block style %}
+<style>
+    body {
+        background: linear-gradient(to right, #0d6efd, #6610f2);
+        color: white;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .btn-group a {
+        min-width: 200px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1 class="mb-4 fw-bold">🤖 Soltec - Painel de Atendimento</h1>
+    <p class="mb-5 fs-5">Gerencie e visualize interações do seu bot de WhatsApp</p>
+
+    <div class="btn-group d-flex flex-column gap-3 align-items-center">
+        <a href="{{ url_for('frontend_bp.dashboard') }}" class="btn btn-light btn-lg">📊 Acessar Dashboard</a>
+        <a href="{{ url_for('frontend_bp.historico') }}" class="btn btn-outline-light btn-lg">📚 Ver Histórico de Conversas</a>
+    </div>
+</div>
+{% endblock %}

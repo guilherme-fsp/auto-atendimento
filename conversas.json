@@ -1,0 +1,72 @@
+[
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "Oi",
+    "resposta": "Você quis dizer **Abadia de Goiás**, está correto?\n1 - Sim\n2 - Não",
+    "data": "2025-05-01",
+    "estado": "confirmar_cidade",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYIEYzNzAxQjhCNkIzNEUyNUYzOTcwMUJDQTY1QkQ4QUU4AA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "Ola",
+    "resposta": "Você quis dizer **Agricolândia**, está correto?\n1 - Sim\n2 - Não",
+    "data": "2025-05-01",
+    "estado": "confirmar_cidade",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYIDcwMUNGMjdDRDFDMUVFNjUzMEIwMDUzNzdDN0QyMkREAA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "oi",
+    "resposta": "Boa noite, Guilherme P! Nos informe sua cidade para darmos continuidade ao atendimento.",
+    "data": "2025-05-01",
+    "estado": "inicio",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYFDNGMzI5OTE4OThBQTJCM0Y0NzA4AA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "santo antonio de padua",
+    "resposta": "Você quis dizer **Santo Antônio de Pádua**, está correto?\n1 - Sim\n2 - Não",
+    "data": "2025-05-01",
+    "estado": "confirmar_cidade",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYFDNGQTQ2MTUxNkY5NzI0NTNGMTZEAA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Santo Antônio de Pádua",
+    "recebido": "1",
+    "resposta": "Perfeito, Guilherme P! Atendimento para Santo Antônio de Pádua iniciado.\n\nComo posso ajudar?\n1 - Horário\n2 - Preços\n3 - Atendente",
+    "data": "2025-05-01",
+    "estado": "menu",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYFDNGREU2MDI5MDM4MEMyQkYxOTYwAA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "oi",
+    "resposta": "Boa noite, Guilherme P! Nos informe sua cidade para darmos continuidade ao atendimento.",
+    "data": "2025-05-01",
+    "estado": "inicio",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYFDNGMEY2NkQ4QjczNjEzMDEyNzVGAA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "Oi",
+    "resposta": "Bom dia, Guilherme P! Nos informe sua cidade para darmos continuidade ao atendimento.",
+    "data": "2025-05-02",
+    "estado": "inicio",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYIDIyQTJGMTY2RkE5MTJFQzQ5OEI5RTMxMzQ1ODk4NTNDAA=="
+  }
+]

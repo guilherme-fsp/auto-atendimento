@@ -1,0 +1,76 @@
+/* style.css */
+
+h1, h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nome-usuario {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.mensagem-cliente {
+    background: #eef7ff;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 4px;
+}
+
+.mensagem-bot {
+    background: #e0ffe0;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.cliente-info {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.chat-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.accordion-item {
+    border: 1px solid #ccc;
+    margin-top: 20px;/* centraliza horizontalmente */
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    max-width: 300px; /* limita a largura */
+    width: 100%;
+}
+
+.accordion-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.accordion-body {
+    padding: 0.5rem 1rem;
+
+}
+
+
+.accordion-button::after {
+    transform: scale(0.7);
+}
+
+.grafico-container {
+    width: 100%;
+    max-width: 300%;
+    margin: 0 auto 2rem auto;
+}
+
+#graficoMensagens {
+    width: 100% !important;
+    height: 200px !important;
+}

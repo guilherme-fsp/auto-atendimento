@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+      "**/dashboard.html": false
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "html.validate.styles": false
+    },
+    "html.validate.scripts": false
+  }

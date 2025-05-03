@@ -1,0 +1,62 @@
+/* style.css */
+
+h1, h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nome-usuario {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.mensagem-cliente {
+    background-color: #f5f5f5;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 4px;
+}
+
+.mensagem-bot {
+    background-color: #e3f2fd;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    font-style: italic;
+    color: #1565c0;
+}
+
+.chat-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+}
+
+
+.accordion-item {
+    border: 1px solid #ccc;
+    margin-top: 20px;/* centraliza horizontalmente */
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    max-width: 300px; /* limita a largura */
+    width: 100%;
+}
+
+.accordion-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+}
+
+.accordion-body {
+    padding: 0.5rem 1rem;
+
+}
+
+
+.accordion-button::after {
+    transform: scale(0.7);
+}

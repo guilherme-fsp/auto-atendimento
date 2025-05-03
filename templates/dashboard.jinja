@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - WhatsApp Bot{% endblock %}
+
+{% block style %}
+<style>
+    body {
+        background-color: #f4f6f8;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: none;
+    }
+    .kpi {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    .grafico-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 2rem auto;
+    }
+    canvas {
+        width: 100% !important;
+        height: 200px !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4 text-center text-primary">📊 Dashboard do Atendimento</h1>
+    <div class="mb-4 text-end">
+        <a href="{{ url_for('frontend_bp.historico') }}" class="btn btn-outline-secondary">📚 Ver histórico</a>
+        <a href="{{ url_for('frontend_bp.home_page') }}" class="btn btn-outline-primary">Voltar ao Início</a>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card p-3">
+                <div>Total de Mensagens</div>
+                <div class="kpi text-success">{{ total_mensagens }}</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <div>Usuários Únicos</div>
+                <div class="kpi text-info">{{ usuarios_unicos }}</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <div>Cidades Atendidas</div>
+                <div class="kpi text-warning">{{ cidades_diferentes }}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h5 class="text-center">📈 Gráfico 1</h5>
+            <div class="grafico-container">
+                <canvas id="grafico1"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-center">📊 Gráfico 2</h5>
+            <div class="grafico-container">
+                <canvas id="grafico2"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h5 class="text-center">📉 Gráfico 3</h5>
+            <div class="grafico-container">
+                <canvas id="grafico3"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h5 class="text-center">🧭 Gráfico 4</h5>
+            <div class="grafico-container">
+                <canvas id="grafico4"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+function criarGrafico(id, tipo, labels, data) {
+    const ctx = document.getElementById(id).getContext('2d');
+    return new Chart(ctx, {
+        type: tipo,
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Mensagens',
+                data: data,
+                backgroundColor: tipo === 'pie' || tipo === 'doughnut' ? [
+                    '#0d6efd', '#198754', '#ffc107', '#dc3545', '#6f42c1'
+                ] : '#0d6efd',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { display: tipo === 'bar' || tipo === 'line' ? false : true },
+                tooltip: { mode: 'index', intersect: false }
+            },
+            scales: tipo === 'pie' || tipo === 'doughnut' ? {} : {
+                y: {
+                    beginAtZero: true,
+                    ticks: { stepSize: 1 }
+                }
+            }
+        }
+    });
+}
+
+window.onload = function () {
+    const labels = {{ dias|tojson|safe }};
+    const data = {{ contagens|tojson|safe }};
+    criarGrafico('grafico1', 'bar', labels, data);
+    criarGrafico('grafico2', 'line', labels, data);
+    criarGrafico('grafico3', 'pie', labels, data);
+    criarGrafico('grafico4', 'doughnut', labels, data);
+};
+</script>
+{% endblock %}
