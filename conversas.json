@@ -68,5 +68,15 @@
     "data": "2025-05-02",
     "estado": "inicio",
     "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYIDIyQTJGMTY2RkE5MTJFQzQ5OEI5RTMxMzQ1ODk4NTNDAA=="
+  },
+  {
+    "numero": "5521996483573",
+    "nome": "Guilherme P",
+    "cidade": "Indefinida",
+    "recebido": "Oi",
+    "resposta": "Boa tarde, Guilherme P! Nos informe sua cidade para darmos continuidade ao atendimento.",
+    "data": "2025-05-03",
+    "estado": "inicio",
+    "msg_id": "wamid.HBgNNTUyMTk5NjQ4MzU3MxUCABIYIDFFNjM1RTRGQTIyMzE0M0RCOTAyQzg5QTk1MTY0MzI2AA=="
   }
 ]
