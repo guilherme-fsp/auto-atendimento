@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, request, jsonify, render_template
 from conversa_beta import processar_mensagem, estado_usuario  # Certifique-se que essa variável esteja exportada
 from rotas_frontend import frontend_bp
