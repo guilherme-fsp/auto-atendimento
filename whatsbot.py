@@ -92,14 +92,6 @@ def enviar_mensagem(telefone, mensagem):
     r = requests.post(url, json=payload, headers=headers)
     print("📤 Enviado:", r.status_code, r.text)
 
-@app.route('/', methods=['GET'])
-def hist():
-    agrupadas = defaultdict(list)
-    for c in conversas:
-        agrupadas[c['remetente']].append(c)
-
-    return render_template("historico.html", conversas_por_numero=agrupadas)
-
 @app.route('/home')
 def home_page():
     return render_template("home.html")
