@@ -91,7 +91,7 @@ def enviar_mensagem(telefone, mensagem):
 
     r = requests.post(url, json=payload, headers=headers)
     print("📤 Enviado:", r.status_code, r.text)
-
+    
 @app.route('/home')
 def home_page():
     return render_template("home.html")
