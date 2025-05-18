@@ -98,9 +98,6 @@ def enviar_mensagem(telefone, mensagem):
 def home_page():
     return render_template("home.html")
 
-@app.route('/conversas', methods=['GET'])
-def get_conversas():
-    return jsonify(conversas)
 
 
 if __name__ == '__main__':

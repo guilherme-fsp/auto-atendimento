@@ -18,8 +18,12 @@ def dashboard():
     contagens=[12, 9, 15, 7, 11],
     total_mensagens=sum(contagens),
     usuarios_unicos=5,
-    cidades_diferentes=3
-)
+    cidades_diferentes=3)
+
+
+@frontend_bp.route("/conversas")
+def pagina_conversas():
+    return render_template("conversas.html")
 
      #return render_template("dashboard.html",
                          #  dias=dias,
