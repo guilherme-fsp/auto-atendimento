@@ -21,7 +21,7 @@ def dashboard():
     cidades_diferentes=3)
 
 
-@frontend_bp.route("/conversas")
+@frontend_bp.route("/painel-conversas")
 def pagina_conversas():
     return render_template("conversas.html")
 
