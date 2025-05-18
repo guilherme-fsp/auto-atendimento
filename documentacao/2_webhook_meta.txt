@@ -1,0 +1,63 @@
+Pequena explicação:
+
+
+Meu bot estava funcionando perfeitamente, porém eu quis upar meu programa para o servidor nuvem ao invés de estar com ele local;
+
+
+Agora que configurei tudo e certifiquei o https, eu quis trocar os tokens de acesso porque eu cometi alguns deslizes como iniciante,
+entao, descobri que na verdade eu tinha que criar um serviço systemd para: 
+a.inicializar automaticamente
+b.reiniciar facilmente meu servidor
+c.monitorar o status do servidor
+
+
+----------------------------------------------------------------------------------------------------------
+1. Cria o arquivo de serviço
+sudo nano /etc/systemd/system/whatsbot.service
+
+
+2. Uso este conteudo no .service
+
+[Unit]
+Description=WhatsBot com Gunicorn
+After=network.target
+
+[Service]
+User=opc
+WorkingDirectory=/home/opc/auto-atendimento
+Environment="PATH=/home/opc/venv/bin"
+ExecStart=/home/opc/venv/bin/gunicorn --bind 127.0.0.1:5000 whatsbot:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+3. salva e edita o serviço
+
+sudo systemctl daemon-reload
+sudo systemctl enable whatsbot.service
+sudo systemctl start whatsbot.service\
+
+4. para verificar se está rodando:
+
+sudo systemctl status whatsbot
+
+
+5. Para reiniciar quando quiser:
+
+sudo systemctl restart whatsbot
+
+
+6. Monitorar logs
+
+journalctl -u whatsbot.service -f
+
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+Entao voltei em https://developers.facebook.com/apps/651416774105358/webhooks/?business_id=624032780250698
+
+https://integravoce.com/webhook
+
+o verificar token como eu adicionei no arquivo nano .env

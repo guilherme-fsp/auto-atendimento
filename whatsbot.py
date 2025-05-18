@@ -8,7 +8,8 @@ import requests
 from collections import defaultdict
 import os
 from dotenv import load_dotenv
-
+import json
+import traceback
 
 
 load_dotenv()
@@ -38,7 +39,7 @@ def verify_webhook():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     data = request.get_json()
-    print("📩 Mensagem recebida:", data)
+    print("📩 Mensagem recebida:\n", json.dumps(data, indent=2))
 
     try:
         value = data['entry'][0]['changes'][0]['value']
@@ -72,7 +73,8 @@ def webhook():
 
             print(f"👤 {sender} ({nome}) disse: {text}")
     except Exception as e:
-        print("Erro ao processar:", e)
+        print("Erro ao processar webhook:")
+        traceback.print_exc()
 
     return jsonify({"status": "ok"}), 200
 
